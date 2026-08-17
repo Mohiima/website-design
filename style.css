@@ -1,0 +1,343 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+.navbar{
+    width:100%;
+    background:#003366;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    margin-right:12px;
+}
+
+.logo h2{
+    color:white;
+    font-size: 22px;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    align-items:center;
+}
+
+.menu li{
+    margin-left:30px;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:.3s;
+}
+
+.menu li a:hover{
+    color:#ffd700;
+}
+
+.login-btn{
+    background:#0077cc;
+    padding:10px 18px;
+    border-radius:6px;
+}
+
+.login-btn:hover{
+    background:#0099ff;
+    color:white;
+}
+
+.main{
+    position:relative;
+}
+
+.main img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+}
+
+.main-text{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color: white;
+    width: 90%;
+}
+
+.main-text h1{
+    font-size:45px;
+    margin-bottom:15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.main-text p{
+    font-size:20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.about{
+    padding:70px 100px;
+    text-align:center;
+}
+
+.about h2{
+    font-size:38px;
+    color:#003366;
+    margin-bottom:25px;
+}
+
+.about p{
+    font-size:18px;
+    line-height:32px;
+    margin-bottom:15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.library{
+    padding:70px 20px;
+    background:white;
+}
+
+.library h2{
+    text-align:center;
+    color:#003366;
+    margin-bottom:45px;
+    font-size:38px;
+}
+
+.library-container{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:#f9f9f9;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:20px;
+    color:#003366;
+}
+
+.card p{
+    margin:0 20px 25px;
+    line-height:28px;
+}
+
+.faculty{
+    padding:70px 20px;
+    background:#eef5ff;
+    text-align:center;
+}
+
+.faculty h2{
+    color:#003366;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.faculty-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.teacher{
+    width:280px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.teacher:hover{
+    transform:translateY(-8px);
+}
+
+.teacher img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.teacher h3{
+    margin:15px 0 8px;
+    color: #003366;
+}
+
+.teacher p{
+    margin-bottom:20px;
+    color: #555;
+}
+
+.contact{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.contact h2{
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+.contact p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+footer{
+    background:#001a33;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size: 15px;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+@media(max-width: 992px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .about {
+        padding: 50px 30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 8px 0;
+        margin-left: 0;
+    }
+
+    .main img {
+        height: 400px;
+    }
+
+    .main-text {
+        top: 45%;
+    }
+
+    .main-text h1 {
+        font-size: 28px;
+    }
+
+    .main-text p {
+        font-size: 16px;
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about h2, .library h2, .faculty h2, .contact h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .library, .faculty {
+        padding: 50px 15px;
+    }
+
+    .card, .teacher {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 480px) {
+    .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+    }
+
+    .logo h2 {
+        font-size: 15px;
+    }
+
+    .main img {
+        height: 320px;
+    }
+
+    .main-text h1 {
+        font-size: 22px;
+    }
+
+    .main-text p {
+        font-size: 14px;
+    }
+}
